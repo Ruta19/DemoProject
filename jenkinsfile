@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+    stages{
+        stage{"Checkout code"}{
+            steps{
+                sh"git clone https://github.com/Ruta19/DemoProject.git"
+            }
+        }
+        stage("check the docker version"){
+            steps{
+                sh " sudo docker version"
+            }
+        }
+        }
+    }
